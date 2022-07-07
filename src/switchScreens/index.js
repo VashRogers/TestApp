@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { Context } from "../Provider";
 
 export default function Switcher(props){
 
+    const { count, setCount } = useContext(Context)
+
     return(
         <View style={styles.container}>
+            <Text>{count}</Text>
             <TouchableOpacity style={styles.btn}
                 onPress={() => props.navigation.navigate('DatePicker')}
             >
@@ -27,6 +31,12 @@ export default function Switcher(props){
                 onPress={() => props.navigation.navigate('ContextTeste')}
             >
                 <Text style={styles.btnText}>Go to teste de Context</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.btn}
+                onPress={() => props.navigation.navigate('TesteDeApi')}
+            >
+                <Text style={styles.btnText}>Go to teste de API</Text>
             </TouchableOpacity>
         </View>
     )

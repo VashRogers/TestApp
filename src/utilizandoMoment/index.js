@@ -9,7 +9,7 @@ export default function UsandoMoment (props){
   const[ dataState, setDataState ] = useState('');
 
   const horaAtual = moment().format('DD/MM/YYYY hh:mm a')
-  const dataWDayjs = dayjs().format('DD/MM/YYYY hh:mm a')
+  const dataWDayjs = dayjs().format('DD/MM/YYYY hh:mm a').t
   const dataWjsDate = new Date()
 
   const onPress = async () => {

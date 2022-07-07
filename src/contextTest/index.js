@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { Context } from "../Provider";
+import Accordion from "../testeAccordion/Accordion";
+import dayjs from "dayjs";
 
 export default function TestandoContext(props){
 
@@ -19,7 +21,16 @@ export default function TestandoContext(props){
             >
                 <Text>Incrementa Teste Context</Text>
             </TouchableOpacity>
-
+            <Accordion 
+                            title={dayjs().format('YYYY/MM/DD')}
+                            data={() => {
+                                return(
+                                    <View>
+                                        <Text>Sei lá</Text>
+                                    </View>
+                                )
+                            }}
+                        />
             <View style={styles.countContainer}>
                 <TouchableOpacity 
                     onPress={()=>{
@@ -30,7 +41,7 @@ export default function TestandoContext(props){
                 </TouchableOpacity>
                 <Text>{ count }</Text>
             </View>
-
+            
         </View>
     )
 }
