@@ -38,6 +38,12 @@ export default function Switcher(props){
             >
                 <Text style={styles.btnText}>Go to teste de API</Text>
             </TouchableOpacity>
+
+            <TouchableOpacity style={styles.btn}
+                onPress={() => props.navigation.navigate('EditFlatlist')}
+            >
+                <Text style={styles.btnText}>Go to Edit FlatList</Text>
+            </TouchableOpacity>
         </View>
     )
 }
