@@ -44,6 +44,18 @@ export default function Switcher(props){
             >
                 <Text style={styles.btnText}>Go to Edit FlatList</Text>
             </TouchableOpacity>
+
+            <TouchableOpacity style={styles.btn}
+                onPress={() => props.navigation.navigate('EditFlatlistW/AnotherDatePicker')}
+            >
+                <Text style={styles.btnText}>Go to Edit FlatList com outro DateTimePickerModal</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.btn}
+                onPress={() => props.navigation.navigate('ManipulandoArray')}
+            >
+                <Text style={styles.btnText}>Go to Manipulação de Array</Text>
+            </TouchableOpacity>
         </View>
     )
 }

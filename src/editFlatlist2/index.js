@@ -1,57 +1,47 @@
+import dayjs from "dayjs";
 import react, { useContext, useEffect, useState } from "react";
 import { Text, View, StyleSheet, TouchableOpacity, TextInput, FlatList, Modal } from 'react-native'
-import DateTimePicker from '@react-native-community/datetimepicker';
-import dayjs from "dayjs";
+import DateTimePickerModal from "react-native-modal-datetime-picker";
 
 const resp = [
-    {id:1, hora:'18:25:00'},
-    {id:2, hora:'17:45:00'},
-    {id:3, hora:'08:20:00'},
+    {id:1, hora:'18:25'},
+    {id:2, hora:'17:45'},
+    {id:3, hora:'08:20'},
 ]
 
-export default function EditingFlatlist (){
+export default function EditFLatlistWithDateTimePickerModal (){
 
-    const [ data, setData ] = useState(resp)
-    const [ isRender, setIsRender ] = useState(false)
-    const [ isPickerVisible, setIsPickerVisible ] = useState(false)
-    const [ inputDate, setInputDate ] = useState();
-    const [ auxInputDate, setAuxInputDate ] = useState();
-    const [ editItem, setEditItem ] = useState();
-
-    
+    const[ data, setData ] = useState(resp)
+    const[ isRender, setIsRender ] = useState(false)
+    const[ isModalVisible, setIsModalVisible ] = useState(false)
+    const[ inputText, setInputText ] = useState();
+    const[ editItem, setEditItem ] = useState();
 
     const onPressItem = (item) => {
-        setIsPickerVisible(true)
-        setInputDate(item.hora)
-        // console.log(inputDate)
+        setIsModalVisible(true)
+        setInputText(item.hora)
         setEditItem(item.id)
-        // console.log(data)
+        console.log(data)
     }
 
-    const handleEditItem = async (newId) => {
+    const handleEditItem = (formatedDate) => {
         const newData = data.map(item => {
-            if(item.id == newId){
-                item.hora = auxInputDate;
+            if(item.id == editItem){
+                item.hora = formatedDate;
+                return item
             }
-            return item
+            return item;
         })
         setData(newData)
         setIsRender(!isRender)
-        // console.log(data)
+        console.log(data)
     }
 
-    const onChangeTimePicker = (event, selectedDate) => {
-        const slcDate = (selectedDate);
-        setIsPickerVisible(false)
-        if(event?.type === 'dismissed'){
-          return setInputDate(inputDate)
-        }
-        const updateDate = dayjs(slcDate).format('HH:mm')
-        // console.log(updateDate)
-        setAuxInputDate(updateDate)
-        console.log(auxInputDate)
-        handleEditItem(editItem)
-      }
+    const onHandleConfirm = (date) => {
+        let formatedDate = dayjs(date).format('HH:mm')
+        handleEditItem(formatedDate)
+        setIsModalVisible(false)//close modal
+    }
 
     const renderItem = ({item}) => {
         return(
@@ -70,18 +60,14 @@ export default function EditingFlatlist (){
                 data={data}
                 keyExtractor={(item) => item.id}
                 renderItem={renderItem}
-                extraData={editItem}
+                extraData={isRender}
             />
-
-        {isPickerVisible && (
-            <DateTimePicker 
-              testID="timePicker"
-              value={dayjs().toDate()}
-              mode="time"
-              onChange={onChangeTimePicker}
+            <DateTimePickerModal
+                isVisible={isModalVisible}
+                mode="time"
+                onConfirm={onHandleConfirm}
+                onCancel={() => setIsModalVisible(false)}
             />
-          )}
-            
         </View>
     )
 

@@ -1,27 +1,26 @@
 import react, { useContext, useEffect, useState } from "react";
 import { Text, View, StyleSheet, TouchableOpacity, TextInput, FlatList, Modal } from 'react-native'
 import DateTimePicker from '@react-native-community/datetimepicker';
-import dayjs from "dayjs";
 
 const resp = [
-    {id:1, hora:'18:25:00'},
-    {id:2, hora:'17:45:00'},
-    {id:3, hora:'08:20:00'},
+    {id:1, hora:'18:25'},
+    {id:2, hora:'17:45'},
+    {id:3, hora:'08:20'},
 ]
 
 export default function EditingFlatlist (){
 
     const[ data, setData ] = useState(resp)
     const[ isRender, setIsRender ] = useState(false)
-    const[ isPickerVisible, setIsPickerVisible ] = useState(false)
-    const[ inputDate, setInputDate ] = useState();
+    const[ isModalVisible, setIsModalVisible ] = useState(false)
+    const[ inputText, setInputText ] = useState();
     const[ editItem, setEditItem ] = useState();
 
     const onPressItem = (item) => {
-        setIsPickerVisible(true)
-        setInputDate(item.hora)
+        setIsModalVisible(true)
+        setInputText(item.hora)
         setEditItem(item.id)
-        // console.log(data)
+        console.log(data)
     }
 
     const handleEditItem = () => {
@@ -37,17 +36,10 @@ export default function EditingFlatlist (){
         console.log(data)
     }
 
-    const onChangeTimePicker = (event, selectedDate) => {
-        console.log('ENTROU HERE?')
-        const slcDate = (dayjs(selectedDate).format('HH:mm'));
-        // handleEditItem(slcDate)
-
-        setShowTimePicker(false)
-        if(event?.type === 'dismissed'){
-          return
-        }
-        
-      }
+    const onPressSaveEdit = () => {
+        handleEditItem(editItem)//save input text to data
+        setIsModalVisible(false)//close modal
+    }
 
     const renderItem = ({item}) => {
         return(
@@ -69,15 +61,30 @@ export default function EditingFlatlist (){
                 extraData={isRender}
             />
 
-        {isPickerVisible && (
-            <DateTimePicker 
-              testID="timePicker"
-              value={dayjs().toDate()}
-              mode="time"
-              onChange={onChangeTimePicker}
-            />
-          )}
-            
+
+            <Modal
+                animationType="fade"
+                visible={isModalVisible}
+                onRequestClose={() => setIsModalVisible(false)}
+            > 
+                <View style={styles.modalView}>
+                    <Text style={styles.text}>Muda horas:</Text>
+                    <TextInput 
+                        style={styles.textInput}
+                        onChangeText={(text) => setInputText(text)}
+                        defaultValue={inputText}
+                        editable={true}
+                        multiline={false}
+                        maxLength={200}
+                    />
+                </View>
+                <TouchableOpacity
+                    onPress={() => onPressSaveEdit()}
+                    style={styles.touchableSave}
+                >
+                    <Text style={styles.text}>Save</Text>
+                </TouchableOpacity>
+            </Modal>
         </View>
     )
 

@@ -42,9 +42,7 @@ export default function TesteApi() {
                 renderItem={({item}) => {
                     return(
                         <View style={styles.renderStyle}>
-                            {/* <Text>Nome: {item.name}</Text>
-                            <Text>Username: {item.username}</Text>
-                            <Text>Id: {item.id}</Text> */}
+                            
                             <Text>{item.id}</Text>
                         </View>
                     )

@@ -11,6 +11,8 @@ import Switcher from "./switchScreens";
 import testandoContext from "./contextTest";
 import TesteApi from "./testandoApi";
 import EditingFlatlist from "./editFlatlist";
+import EditFLatlistWithDateTimePickerModal from "./editFlatlist2";
+import ManipulandoArray from "./manipulandoArray";
 
 const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
@@ -25,6 +27,8 @@ const DrawerNavigator = () => {
             <Drawer.Screen name="Teste de Context API" component={testandoContext} />
             <Drawer.Screen name="Testando Consumo de API" component={TesteApi} />
             <Drawer.Screen name="Editando FlatList" component={EditingFlatlist} />
+            <Drawer.Screen name="Editando FlatList com outro Date Picker" component={EditFLatlistWithDateTimePickerModal} />
+            <Drawer.Screen name="Manipulando Array" component={ManipulandoArray} />
         </Drawer.Navigator>
     )
 };
@@ -42,6 +46,9 @@ export default function Navigator(){
                     <Stack.Screen name="ContextTeste" component={testandoContext} />
                     <Stack.Screen name="TesteDeApi" component={TesteApi} />
                     <Stack.Screen name="EditFlatlist" component={EditingFlatlist} />
+                    <Stack.Screen name="EditFlatlistW/AnotherDatePicker" component={EditFLatlistWithDateTimePickerModal} />
+                    <Stack.Screen name="ManipulandoArray" component={ManipulandoArray} />
+
                 </Stack.Navigator>
             </NavigationContainer>
         </Provider>
