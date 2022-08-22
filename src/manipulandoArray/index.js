@@ -66,114 +66,78 @@ const response = [
         "localizacao": "{\"latitude\": -22.2239, \"longitude\": -54.8057667 }",
         "justificativa": null
     },
-    {
-        "id": 7,
-        "funcionario_id": 1,
-        "horario_id": 1,
-        "hora": "08:30:00",
-        "data": "2022-07-18",
-        "dispositivo": "Operational System: android, Version: 32",
-        "localizacao": "{\"latitude\": -22.2239, \"longitude\": -54.8057667 }",
-        "justificativa": null
-    },
-    {
-        "id": 8,
-        "funcionario_id": 1,
-        "horario_id": 1,
-        "hora": "08:50:00",
-        "data": "2022-07-18",
-        "dispositivo": "Operational System: android, Version: 32",
-        "localizacao": "{\"latitude\": -22.2239, \"longitude\": -54.8057667 }",
-        "justificativa": null
-    },
-    {
-        "id": 9,
-        "funcionario_id": 1,
-        "horario_id": 1,
-        "hora": "10:41:00",
-        "data": "2022-07-18",
-        "dispositivo": "Operational System: android, Version: 32",
-        "localizacao": "{\"latitude\": -22.2239, \"longitude\": -54.8057667 }",
-        "justificativa": null
-    },
-    {
-        "id": 10,
-        "funcionario_id": 1,
-        "horario_id": 1,
-        "hora": "11:01:00",
-        "data": "2022-07-18",
-        "dispositivo": "Operational System: android, Version: 32",
-        "localizacao": "{\"latitude\": -22.2239, \"longitude\": -54.8057667 }",
-        "justificativa": null
-    },
-    {
-        "id": 11,
-        "funcionario_id": 1,
-        "horario_id": 1,
-        "hora": "11:22:00",
-        "data": "2022-07-18",
-        "dispositivo": "Operational System: android, Version: 32",
-        "localizacao": null,
-        "justificativa": null
-    },
-    {
-        "id": 12,
-        "funcionario_id": 1,
-        "horario_id": 1,
-        "hora": "13:06:00",
-        "data": "2022-07-18",
-        "dispositivo": "Operational System: android, Version: 32",
-        "localizacao": "{\"latitude\": -22.2239, \"longitude\": -54.8057667 }",
-        "justificativa": null
-    },
-    {
-        "id": 13,
-        "funcionario_id": 1,
-        "horario_id": 1,
-        "hora": "14:05:00",
-        "data": "2022-07-18",
-        "dispositivo": "Operational System: android, Version: 32",
-        "localizacao": "{\"latitude\": -22.2239, \"longitude\": -54.8057667 }",
-        "justificativa": null
-    }
+    // {
+    //     "id": 7,
+    //     "funcionario_id": 1,
+    //     "horario_id": 1,
+    //     "hora": "08:30:00",
+    //     "data": "2022-07-18",
+    //     "dispositivo": "Operational System: android, Version: 32",
+    //     "localizacao": "{\"latitude\": -22.2239, \"longitude\": -54.8057667 }",
+    //     "justificativa": null
+    // },
+    // {
+    //     "id": 8,
+    //     "funcionario_id": 1,
+    //     "horario_id": 1,
+    //     "hora": "08:50:00",
+    //     "data": "2022-07-18",
+    //     "dispositivo": "Operational System: android, Version: 32",
+    //     "localizacao": "{\"latitude\": -22.2239, \"longitude\": -54.8057667 }",
+    //     "justificativa": null
+    // },
+    // {
+    //     "id": 9,
+    //     "funcionario_id": 1,
+    //     "horario_id": 1,
+    //     "hora": "10:41:00",
+    //     "data": "2022-07-18",
+    //     "dispositivo": "Operational System: android, Version: 32",
+    //     "localizacao": "{\"latitude\": -22.2239, \"longitude\": -54.8057667 }",
+    //     "justificativa": null
+    // },
+    // {
+    //     "id": 10,
+    //     "funcionario_id": 1,
+    //     "horario_id": 1,
+    //     "hora": "11:01:00",
+    //     "data": "2022-07-18",
+    //     "dispositivo": "Operational System: android, Version: 32",
+    //     "localizacao": "{\"latitude\": -22.2239, \"longitude\": -54.8057667 }",
+    //     "justificativa": null
+    // },
+    // {
+    //     "id": 11,
+    //     "funcionario_id": 1,
+    //     "horario_id": 1,
+    //     "hora": "11:22:00",
+    //     "data": "2022-07-18",
+    //     "dispositivo": "Operational System: android, Version: 32",
+    //     "localizacao": null,
+    //     "justificativa": null
+    // },
+    // {
+    //     "id": 12,
+    //     "funcionario_id": 1,
+    //     "horario_id": 1,
+    //     "hora": "13:06:00",
+    //     "data": "2022-07-18",
+    //     "dispositivo": "Operational System: android, Version: 32",
+    //     "localizacao": "{\"latitude\": -22.2239, \"longitude\": -54.8057667 }",
+    //     "justificativa": null
+    // },
+    // {
+    //     "id": 13,
+    //     "funcionario_id": 1,
+    //     "horario_id": 1,
+    //     "hora": "14:05:00",
+    //     "data": "2022-07-18",
+    //     "dispositivo": "Operational System: android, Version: 32",
+    //     "localizacao": "{\"latitude\": -22.2239, \"longitude\": -54.8057667 }",
+    //     "justificativa": null
+    // }
 ]
 
-//[ 
-//     {
-//         id: 0,
-//         texto:'Teste de Draggable',
-//         desc:'Descrição curta pra caceta',
-//         background:'red'
-//     },
-    
-//     {
-//         id: 1,
-//         texto:'Teste de Draggable2',
-//         desc:'Descrição longa lorem ipsum sit dolor amet, dolor, lit, zapdos, pokemon radpidfire. Je sui Madmouseille, tomato juice; song of madness',
-//         background:'blue'
-//     },
-    
-//     {
-//         id: 2,
-//         texto:'TerraFirmação',
-//         desc:'Terra transform the earth on the table in the react native app',
-//         background:'green'
-//     },
-
-//     {
-//         id: 3,
-//         texto:'TerraFirmação',
-//         desc:'Terra transform the earth on the table in the react native apsadasasdasdap',
-//         background:'green'
-//     },
-//     // {
-//     //     id: 4,
-//     //     texto:'TerraFirmação',
-//     //     desc:'Terra transform the earth on the table in the react native ROGER TESTE TESTE',
-//     //     background:'green'
-//     // },
-    
-// ]
 
 export default function ManipulandoArray (){
 
@@ -188,9 +152,9 @@ export default function ManipulandoArray (){
     const arrayOfOrganizedPoints = useMemo(() => {
         const arr = []
 
-        const { hours: fieldHoursArray }= response[0];
+        const { hours: fieldHoursArray }= schedule[0];
 
-        const punchesArray = responseTeste;
+        const punchesArray = punches;
 
         fieldHoursArray.forEach((element, otherKey) => {
 
@@ -210,7 +174,7 @@ export default function ManipulandoArray (){
 
         return arr
 
-    }, [response, responseTeste])
+    }, [schedule, punches])
 
 
 
