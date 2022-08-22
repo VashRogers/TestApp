@@ -59,22 +59,17 @@ export default function Switcher(props){
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.btn}
-                    onPress={() => props.navigation.navigate('TestandoEncode')}
-                >
-                    <Text style={styles.btnText}>Go to Teste Encode</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.btn}
-                    onPress={() => props.navigation.navigate('TestandoPushNotification')}
-                >
-                    <Text style={styles.btnText}>Go to Teste Push Notification</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.btn}
                     onPress={() => props.navigation.navigate('TesteComponenteClasse')}
                 >
                     <Text style={styles.btnText}>Go to Teste TelaClassComponent e Teste de route params</Text>
                 </TouchableOpacity>
+
+                <TouchableOpacity style={styles.btn}
+                    onPress={() => props.navigation.navigate('TelaModalSelector')}
+                >
+                    <Text style={styles.btnText}>Go to Tela Modal Selector</Text>
+                </TouchableOpacity>
+
 
             </View>
             

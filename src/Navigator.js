@@ -13,10 +13,9 @@ import TesteApi from "./testandoApi";
 import EditingFlatlist from "./editFlatlist";
 import EditFLatlistWithDateTimePickerModal from "./editFlatlist2";
 import ManipulandoArray from "./manipulandoArray";
-import TestandoEncode from "./testandoEncode";
-import ExpoPushNotification from "./expoNotification";
 import TesteClasseParam from "./testeClassParam";
 import TesteParamsWithClass from "./testeClassParam/receivingParams";
+import ModalSelector from "./modalSelector";
 
 const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
@@ -33,8 +32,7 @@ const DrawerNavigator = () => {
             <Drawer.Screen name="Editando FlatList" component={EditingFlatlist} />
             <Drawer.Screen name="Editando FlatList com outro Date Picker" component={EditFLatlistWithDateTimePickerModal} />
             <Drawer.Screen name="Manipulando Array" component={ManipulandoArray} />
-            <Drawer.Screen name="Testando Encode" component={TestandoEncode} />
-            <Drawer.Screen name="Testando Push Notification" component={ExpoPushNotification} />
+            <Drawer.Screen name="TelaModalSelector" component={ModalSelector} />
         </Drawer.Navigator>
     )
 };
@@ -54,10 +52,9 @@ export default function Navigator(){
                     <Stack.Screen name="EditFlatlist" component={EditingFlatlist} />
                     <Stack.Screen name="EditFlatlistW/AnotherDatePicker" component={EditFLatlistWithDateTimePickerModal} />
                     <Stack.Screen name="ManipulandoArray" component={ManipulandoArray} />
-                    <Stack.Screen name="TestandoEncode" component={TestandoEncode} />
-                    <Stack.Screen name="TestandoPushNotification" component={ExpoPushNotification} />
                     <Stack.Screen name="TesteComponenteClasse" component={TesteClasseParam} />
                     <Stack.Screen name="TesteParams" component={TesteParamsWithClass} />
+                    <Stack.Screen name="TelaModalSelector" component={ModalSelector} />
                 </Stack.Navigator>
             </NavigationContainer>
         </Provider>
