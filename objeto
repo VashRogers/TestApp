@@ -1,0 +1,52 @@
+Array [
+  Object {
+    "date": "2022-10-06",
+    "value": Array [
+      Object {
+        "data": "2022-10-06",
+        "dispositivo": "GÊNESIS 30",
+        "funcionario_id": 81,
+        "hora": "12:59:00",
+        "horario_id": 1,
+        "id": 7243,
+        "justificativa": null,
+        "localizacao": null,
+        "saldo": Object {
+          "minutos": 1,
+          "tempo": "00:01",
+        },
+        "tipo": "entrada",
+      },
+      Object {
+        "data": "2022-10-06",
+        "dispositivo": "GÊNESIS 30",
+        "funcionario_id": 81,
+        "hora": "11:31:00",
+        "horario_id": 1,
+        "id": 7232,
+        "justificativa": null,
+        "localizacao": null,
+        "saldo": Object {
+          "minutos": 31,
+          "tempo": "00:31",
+        },
+        "tipo": "saida",
+      },
+      Object {
+        "data": "2022-10-06",
+        "dispositivo": "GÊNESIS 30",
+        "funcionario_id": 81,
+        "hora": "07:42:00",
+        "horario_id": 1,
+        "id": 7222,
+        "justificativa": null,
+        "localizacao": null,
+        "saldo": Object {
+          "minutos": -42,
+          "tempo": "00:42",
+        },
+        "tipo": "entrada",
+      },
+    ],
+  },
+ 
