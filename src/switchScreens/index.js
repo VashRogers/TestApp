@@ -70,6 +70,11 @@ export default function Switcher(props){
                     <Text style={styles.btnText}>Go to Tela Modal Selector</Text>
                 </TouchableOpacity>
 
+                <TouchableOpacity style={styles.btn}
+                    onPress={() => props.navigation.navigate('Debounce')}
+                >
+                    <Text style={styles.btnText}>Go to DebounceScreen</Text>
+                </TouchableOpacity>
 
             </View>
             

@@ -16,6 +16,8 @@ import ManipulandoArray from "./manipulandoArray";
 import TesteClasseParam from "./testeClassParam";
 import TesteParamsWithClass from "./testeClassParam/receivingParams";
 import ModalSelector from "./modalSelector";
+import DebounceScreen from "./debounce";
+
 
 const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
@@ -33,6 +35,7 @@ const DrawerNavigator = () => {
             <Drawer.Screen name="Editando FlatList com outro Date Picker" component={EditFLatlistWithDateTimePickerModal} />
             <Drawer.Screen name="Manipulando Array" component={ManipulandoArray} />
             <Drawer.Screen name="TelaModalSelector" component={ModalSelector} />
+            <Drawer.Screen name="Debounce" component={DebounceScreen} />
         </Drawer.Navigator>
     )
 };
@@ -55,6 +58,7 @@ export default function Navigator(){
                     <Stack.Screen name="TesteComponenteClasse" component={TesteClasseParam} />
                     <Stack.Screen name="TesteParams" component={TesteParamsWithClass} />
                     <Stack.Screen name="TelaModalSelector" component={ModalSelector} />
+                    <Drawer.Screen name="Debounce" component={DebounceScreen} />
                 </Stack.Navigator>
             </NavigationContainer>
         </Provider>
